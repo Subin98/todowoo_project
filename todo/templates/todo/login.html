@@ -1,0 +1,13 @@
+{% extends 'todo/base.html' %}
+{% block content  %}
+{%load crispy_forms_tags %}
+<h1>Login</h1>
+<hr class="divider">
+<br>
+<form method="POST" class="formbox">
+{% csrf_token %}
+<b>{{ form|crispy }}</b>
+<p style="color:red">{{ error }}</p>
+<button type="submit" class="btn btn-success">Login</button>
+</form
+{% endblock %}

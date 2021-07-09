@@ -1,0 +1,11 @@
+{% extends 'todo/base.html' %}
+{% block content  %}
+{%load crispy_forms_tags %}
+<h1>Create Todo</h1>
+<form method="POST">
+{% csrf_token %}
+{{ form|crispy }}
+<p style="color:red">{{ error }}</p>
+<button type="submit">create</button>
+</form
+{% endblock %}
